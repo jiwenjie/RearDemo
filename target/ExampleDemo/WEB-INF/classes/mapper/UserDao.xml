@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.dao.UserDao">
+
+    <!-- 配置数据库字段名和实体类对应 -->
+    <resultMap id="user" type="com.example.entity.User">
+        <result property="isAdmin" column="is_admin"/>
+    </resultMap>
+
+    <insert id="registerUser" parameterType="java.lang.String">
+        INSERT INTO users (username, password, phone) VALUES (#{username}, #{password}, #{phone})
+    </insert>
+
+    <select id="userLogin" parameterType="java.lang.String" resultType="user">
+        SELECT id, username, phone, avatar, is_admin FROM users WHERE username = #{username} AND password = #{password}
+    </select>
+
+    <select id="findUserByName" parameterType="java.lang.String" resultType="user">
+        SELECT id, username, phone, avatar, is_admin FROM users WHERE username=#{username}
+    </select>
+
+    <select id="findUserByPhone" parameterType="java.lang.String" resultType="user">
+        SELECT id, username, phone, avatar, is_admin FROM  users WHERE phone = #{phone}
+    </select>
+</mapper>
