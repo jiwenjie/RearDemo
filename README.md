@@ -11,10 +11,10 @@ tips: android 端涉及到的代码我已经放在 androidFile 文件夹下了�
 
 运行结果如下
 
-![test01](https://github.com/jiwenjie/RearDemo/tree/master/image/01.png)
+![test01](image/01.png)
 
-![test02](https://github.com/jiwenjie/RearDemo/tree/master/image/02.png)
+![test02](image/02.png)
 
-![test03](https://github.com/jiwenjie/RearDemo/tree/master/image/03.png)
+![test03](image/03.png)
 
-![test04](https://github.com/jiwenjie/RearDemo/tree/master/image/03.png)
+![test04](image/03.png)
